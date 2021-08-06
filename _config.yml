@@ -1,4 +1,4 @@
 theme: jekyll-theme-cayman
-title: Connectionist Temporal Classification- A study   
+title: Connectionist Temporal Classification   
 description: In this paper we explore the fundamentals of Connectionist Temporal Classification algorithm and how to use its Keras/Tensorflow implementation  
 show_downloads: true
