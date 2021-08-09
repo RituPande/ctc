@@ -4,4 +4,10 @@ In this paper, we attempt to understand the principles and mathematics of *Conne
 
 ## 1. Sequence to Sequence Models  
 
-Sequence to Sequence models are implemented using Reccurrent Neural Networks or RNNs. RNNs take X<sub>1</sub>, X<sub>2</sub>, ..., X<sub>N</sub> inputs at each time step respectively and output a label sequence Y<sub>1</sub>, Y<sub>2</sub>, ..., Y<sub>M</sub>. There are other variants of RNN which provide an output Y<sub>k</sub> as an additional input to step k+1. But for simplicity, we shall only focus on the most basic RNN implementation to understand the mechanics of CTC.
+Sequence to Sequence models are deep learning models that take a sequence of symbols as input and also output a seqeunce of symbols.  Sequence to Seqeunce models are implemented using Reccurrent Neural Networks or RNNs. RNNs take X<sub>1</sub>, X<sub>2</sub>, ..., X<sub>N</sub> inputs at each time step respectively and output a label sequence Y<sub>1</sub>, Y<sub>2</sub>, ..., Y<sub>M</sub>. There are other variants of RNN which provide an output Y<sub>k</sub> as an additional input to step k+1. But for simplicity, we shall only focus on the most basic RNN implementation to understand the mechanics of CTC.  
+  
+  <p align="center">
+  <img src="./images/RNN.png"> <br> 
+  <b> Figure 1. Simple RNN </b>  
+  </p> 
+
