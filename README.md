@@ -31,18 +31,20 @@ Y<sup>D</sup><sub>k</sub> = prob(L<sub>k</sub> = D | X<sub>0</sub>,X<sub>1</sub>
 
 CTC algorithm takes the probabilty distribution across all vocabulary symbols at all time steps and decodes the label sequence from it. The follwing sections will explain various strategies that can be used to align the output symbols to input seqeunce to form a label sequence. 
 
+### 2.1. Alignment Strategies  
 
-### 2.1. Decoding Strategies  
+#### 2.1.1. Greedy Approach    
+The simplest alignment strategy is to choose the output symbol in the vocabulary with the greatest probability in the probability distribution for the particular timestep. For a time step K, the output symbol in the label sequence L<sub>k</sub> can be found as follows:
 
-**Greedy Approach**    
+L<sub>k</sub> = argmax Y<sub>k</sub>
 
-**Beam Search**    
+While for simple tasks this strategy might work, it can create issues for tasks wherein there could be constraints w.r.t. the output symbols that can be adjecent to each other in the label sequence. A purely greedy approach can result in invalid label sequences being produced for such cases. To solve this issue alternative approaches are used which are described below.
 
-### 2.2  Alignment Strategies      
+#### 2.1.1. Maximum Likelihood      
 
-#### 2.2.1. Maximum Likelihood      
+#### 2.1.2. Expectation Maximiation    
 
-#### 2.2.2. Expectation Maximiation    
+### 2.2. Beam Search 
 
 
 
