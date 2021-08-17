@@ -31,7 +31,9 @@ Y<sup>D</sup><sub>k</sub> = prob(L<sub>k</sub> = D | X<sub>0</sub>,X<sub>1</sub>
 
 CTC algorithm takes the probabilty distribution across all vocabulary symbols at all time steps and decodes the label sequence from it. The follwing sections will explain various strategies that can be used to align the output symbols to input seqeunce to form a label sequence. 
 
-### 2.1. Alignment Strategies  
+### 2.1. Alignment Strategies for Model Training
+
+While it is obvious that we can use crossentropy loss for each time-step to train the model; it is not clear as to how to align the output symbols w.r.t. the input sequence to enable us to calculate the loss. Following are the most common approaches used: 
 
 #### 2.1.1. Greedy Approach    
 The simplest alignment strategy is to choose the output symbol in the vocabulary with the greatest probability in the probability distribution for the particular timestep. For a time step K, the output symbol in the label sequence L<sub>k</sub> can be found as follows:
@@ -40,9 +42,11 @@ L<sub>k</sub> = argmax Y<sub>k</sub>
 
 While for simple tasks this strategy might work, it can create issues for tasks wherein there could be constraints w.r.t. the output symbols that can be adjecent to each other in the label sequence. A purely greedy approach can result in invalid label sequences being produced for such cases. To solve this issue alternative approaches are used which are described below.
 
-#### 2.1.1. Maximum Likelihood      
+#### 2.1.1. Most Likely Output Sequence
 
-#### 2.1.2. Expectation Maximiation    
+To ensure that the label sequence is valid, the symbols in Y<sub>k</sub> Y at any step k are constraint to the output symbols 
+
+#### 2.1.2. Expectation Maximization    
 
 ### 2.2. Beam Search 
 
