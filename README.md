@@ -55,8 +55,11 @@ For example, for a 5-step input sequence, if the output sequence is only of leng
   <b> Figure 3. Path Constraints  </b>  
   </p>
  
- Since the number of valid paths can be expotential, the mechanism to find the best path uses dynamic programming approach like the ***Viterbi Algorithm***.  
- The training algorithm goes as follows:  
+ Since the number of valid paths can be expotential, the mechanism to find the best path uses dynamic programming approach like the ***Viterbi Algorithm***.    
+ 
+ ---
+ 
+ Model training goes as follows:  
  
  1. Perform the forward pass of the model to get Y<sub>k</sub> for k = 1 to n, where n = number of input symbols.    
  2. Extract only the output symbols from Y<sub>k</sub>  
@@ -66,9 +69,12 @@ For example, for a 5-step input sequence, if the output sequence is only of leng
  5. Model weights are updated by performing back propagation using &nabla; L<sub>Xentropy</sub>  
  6. Goto step 1 until L<sub>Xentropy</sub> < predefined value  
  
+ ---
  
+ While using the most probable path to decide on the alignment of the output symbols w.r.t. the input sequence provides acceptable results and used in many tasks, the training is sensitive to the initial alignment. If the initial alignment is not suitable, the training could converge to a bad local optima. To address the issue, instead of choosing the most probable path, an alternative is to chose expected path instead of the most probable path. 
 
 #### 2.1.2. Expectation Maximization    
+
 
 ### 2.2. Beam Search 
 
