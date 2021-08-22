@@ -71,10 +71,23 @@ For example, for a 5-step input sequence, if the output sequence is only of leng
  
  ---
  
- While using the most probable path to decide on the alignment of the output symbols w.r.t. the input sequence provides acceptable results and used in many tasks, the training is sensitive to the initial alignment. If the initial alignment is not suitable, the training could converge to a bad local optima. To address the issue, instead of choosing the most probable path, an alternative is to chose expected path instead of the most probable path. 
+ While using the most probable path to decide on the alignment of the output symbols w.r.t. the input sequence provides acceptable results and used in many tasks, the training is sensitive to the initial alignment. If the initial alignment is not suitable, the training could converge to a bad local optima. To address the issue, instead of choosing the most probable path, an alternative is to chose expected path. 
 
 #### 2.1.2. Expectation Maximization    
 
+Loss = E[ - &sum; <sub>k</sub> log( Y<sub>k</sub>(S = D ) ]
+
+Due to linearilty of expectation:  
+&emsp;&emsp;&emsp;&emsp; = - &sum; <sub>k</sub> E [ log( Y<sub>k</sub>(S = D ) ]
+
+&emsp;&emsp;&emsp;&emsp; = - &sum; <sub>k</sub> &sum; <sub> D &in; S </sub> P(S = D | S, X )log( Y<sub>k</sub>(S = D ) where S is a label sequence and X is input sequence  
+
+P(S = D | S, X ) &prop; P(S = D, S | X )  
+  
+P(S = D, S | X ) is the total probability of all valid paths in the graph for target sequence S that go through the symbol D at timestep k.
+ 
+ 
+  
 
 ### 2.2. Beam Search 
 
