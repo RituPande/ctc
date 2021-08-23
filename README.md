@@ -75,6 +75,8 @@ For example, for a 5-step input sequence, if the output sequence is only of leng
 
 #### 2.1.2. Expectation Maximization    
 
+Choosing expectated alignment at each iteration instead of the most probable alignment is more statistically robust and prevents the solution to converge to a bad local optima.
+
 Loss = E[ - &sum; <sub>k</sub> log( Y<sub>k</sub>(S = D ) ]
 
 Due to linearilty of expectation:  
@@ -82,11 +84,11 @@ Due to linearilty of expectation:
 
 &emsp;&emsp;&emsp;&emsp; = - &sum; <sub>k</sub> &sum; <sub> D &in; S </sub> P(S = D | S, X )log( Y<sub>k</sub>(S = D ) where S is a label sequence and X is input sequence  
 
-P(S = D | S, X ) &prop; P(S = D, S | X )  
+P(S <sub>k </sub> = D | S, X ) &prop; P(S = D, S | X )  
   
 P(S = D, S | X ) is the total probability of all valid paths in the graph for target sequence S that go through the symbol D at timestep k.
  
- 
+ P(S = D, S | X )  for all D &in; S is calculated using ***Forward Backward algorithm***
   
 
 ### 2.2. Beam Search 
