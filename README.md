@@ -106,7 +106,7 @@ In this section gives overview of the project files to break the Captcha 2.0 cod
 
 ***ctc_study.py***  contains the training and evaluation of the CaptachaModel
 
-***captcha_dataset.py***  contains the implemenatation to read the captcha dataset
+***captcha_dataset.py***  contains the implementation to read the captcha dataset
 
 
 
