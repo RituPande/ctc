@@ -94,6 +94,23 @@ P(S = S<sub>r</sub>, S | X ) is the total probability of all valid paths in the 
 ### 2.2. Beam Search 
 
 
+### 2.2. Using CTC to Break Captcha 2.0
+
+In this section gives overview of the project files to break the Captcha 2.0 codes using implementation of CTC decoding in Keras/Tensorflow. 
+
+***captcha_model.py***  contains implementation of custom:   
+
+-  Model : CaptchaModel  
+-  Loss function: loss_func  
+-  Accuracy Metrics: CTCAccuracy  
+
+***ctc_study.py***  contains the training and evaluation of the CaptachaModel
+
+***captcha_dataset.py***  contains the implemenatation to read the captcha dataset
+
+
+
+
 
 
  
