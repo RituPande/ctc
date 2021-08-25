@@ -102,13 +102,13 @@ There are many variations of CTC described above that can be used in sequence to
 
 ### 2.2. Using CTC to Break Captcha 2.0
 
-In this section gives overview of the project files to break the Captcha 2.0 codes using implementation of CTC decoding in Keras/Tensorflow. 
+This section gives overview of the project files to break the Captcha 2.0 codes using implementation of CTC decoding in Keras/Tensorflow. 
 
-***captcha_model.py***  contains implementation of custom:   
+***captcha_model.py***  contains implementation of :   
 
--  Model : CaptchaModel  
--  Loss function: loss_func  
--  Accuracy Metrics: CTCAccuracy  
+-  **CaptchaModel** : It is a custom Keras model that uses bi-directional LTSMs  
+-  **loss_func** :   It is a custom loss function that uses the tensorflow implementation of CTC to calculate CTC loss
+-  **CTCAccuracy** : This is a custom accuracy metrics that calculates accuracy as the hamming distance between the ground truth and predicted captcha.  
 
 ***ctc_study.py***  contains the training and evaluation of the CaptachaModel
 
