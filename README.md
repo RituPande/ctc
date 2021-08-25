@@ -91,8 +91,14 @@ P(S = S<sub>r</sub>, S | X ) is the total probability of all valid paths in the 
  P(S =S<sub>r</sub> , S | X )  for all S<sub>r</sub> &in; S is calculated using ***Forward Backward algorithm***
   
 
-### 2.2. Beam Search 
+### 2.2. Variants of CTC
 
+There are many variations of CTC described above that can be used in sequence to sequence model:  
+
+- Instead of just the hidden layer from the previous timestep and input to the current timestep , the model takes the output of the previous timeestep and input to the current timestep  
+- Bi-ditectional LTSM model can also be used instead of vanilla RNN.
+  
+- Instead of greedy search and approximate search algorithm called beam search can also be used for more complex tasks. Refer [2],[3] for more details on beam search  
 
 ### 2.2. Using CTC to Break Captcha 2.0
 
@@ -107,6 +113,11 @@ In this section gives overview of the project files to break the Captcha 2.0 cod
 ***ctc_study.py***  contains the training and evaluation of the CaptachaModel
 
 ***captcha_dataset.py***  contains the implementation to read the captcha dataset
+
+## References  
+1. [S18 Lecture 14: Connectionist Temporal Classification (CTC)](https://www.youtube.com/watch?v=c86gfVGcvh4&t=2865s)  
+2. [C5W3L03 Beam Search](https://www.youtube.com/watch?v=RLWuzLLSIgw&t=12s)  
+3. [Refining Beam Search](https://www.youtube.com/watch?v=gb__z7LlN_4)  
 
 
 
