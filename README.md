@@ -82,7 +82,7 @@ Loss = E[ - &sum; <sub>k</sub> log( Y<sub>k</sub>(S = S<sub>r</sub> ) ]
 Due to linearilty of expectation:  
 &emsp;&emsp;&emsp;&emsp; = - &sum; <sub>k</sub> E [ log( Y<sub>k</sub>(S =S<sub>r</sub> ) ]
 
-&emsp;&emsp;&emsp;&emsp; = - &sum; <sub>k</sub> &sum; <sub> S<sub>r</sub> &in; S </sub> P(S = S<sub>r</sub> | S, X )log( Y<sub>k</sub>(S = S<sub>r</sub> ) where S is a label sequence and X is input sequence  
+&emsp;&emsp;&emsp;&emsp; = - &sum; <sub>k</sub> &sum; <sub> S<sub>r</sub> &in; S </sub> P(S = S<sub>r</sub> | S, X )log( Y<sub>k</sub>(S = S<sub>r</sub> ) where S is a output sequence and X is input sequence  
 
 P(S <sub>k </sub> = S<sub>r</sub> | S, X ) &prop; P(S = S<sub>r</sub> , S | X )  
   
