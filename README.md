@@ -106,7 +106,10 @@ This section gives overview of the project files to break the Captcha 2.0 codes 
 
 ***captcha_model.py***  contains implementation of :   
 
--  **CaptchaModel** : It is a custom Keras model that uses bi-directional LTSMs  
+-  **CaptchaModel** : It is a custom Keras model that :  
+    - Downsamples the image using 2D convolutions and max-pooling 
+    - The width of the downsampled image is equal to the timesteps    
+    uses bi-directional LTSMs  
 -  **loss_func** :   It is a custom loss function that uses the tensorflow implementation of CTC to calculate CTC loss
 -  **CTCAccuracy** : This is a custom accuracy metrics that calculates accuracy as the hamming distance between the ground truth and predicted captcha.  
 
