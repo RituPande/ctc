@@ -90,8 +90,9 @@ P(S = S<sub>r</sub>, S | X ) is the total probability of all valid paths in the 
  
  P(S =S<sub>r</sub> , S | X )  for all S<sub>r</sub> &in; S is calculated using ***Forward Backward algorithm***
   
+### 2.2. Handling Repeatitions
 
-### 2.2. Variants of CTC
+### 2.3. Variants of CTC
 
 There are many variations of CTC described above that can be used in sequence to sequence model:  
 
@@ -100,7 +101,7 @@ There are many variations of CTC described above that can be used in sequence to
   
 - Instead of greedy search and approximate search algorithm called beam search can also be used for more complex tasks. Refer [2],[3] for more details on beam search  
 
-### 2.2. Using CTC to Break Captcha 2.0
+## 3. Using CTC to Break Captcha 2.0
 
 This section gives overview of the project files to break the Captcha 2.0 codes using implementation of CTC decoding in Keras/Tensorflow. 
 
