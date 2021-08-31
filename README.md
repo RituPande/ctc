@@ -95,7 +95,7 @@ P(S = S<sub>r</sub>, S | X ) is the total probability of all valid paths in the 
 
 There are many variations of CTC described above that can be used in sequence to sequence model:  
 
-- Instead of just the hidden layer from the previous timestep and input to the current timestep , the model takes the output of the previous timeestep and input to the current timestep  
+- Instead of just the hidden layer from the previous timestep and input to the current timestep , the model takes the output of the previous timestep and input to the current timestep  
 - Bi-ditectional LTSM model can also be used instead of vanilla RNN.
   
 - Instead of greedy search and approximate search algorithm called beam search can also be used for more complex tasks. Refer [2],[3] for more details on beam search  
