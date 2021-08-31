@@ -13,7 +13,7 @@ Sequence to Sequence models are deep learning models that take a sequence of sym
   
   
 ## 2. Understanding Connectionist Temporal Classfication    
-*Connectionist Temporal Classification* or CTC is a neural network output decoding and scoring algorithm that is used in sequence to sequence deep learning models.  It is sepcifically used in models where:  
+*Connectionist Temporal Classification* or CTC is a neural network output decoding and scoring algorithm that is used in sequence to sequence deep learning models.  It is specifically used in models where:  
 - The length of input sequence is greater than the length of output sequence
 - The output sequence order corresponds to the input sequence order.
 
