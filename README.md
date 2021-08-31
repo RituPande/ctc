@@ -29,7 +29,7 @@ The job of CTC algorithm is to align the output symbols to the input sequence. S
 Y<sup>D</sup><sub>k</sub> is the probability of symbol D in the output vocabulary being the K-th symbol in the label sequence given the inputs from time steps 0 through K i.e. 
 Y<sup>D</sup><sub>k</sub> = prob(L<sub>k</sub> = D | X<sub>0</sub>,X<sub>1</sub>,....,X<sub>k</sub>).
 
-CTC algorithm takes the probabilty distribution across all vocabulary symbols at all time steps and decodes the label sequence from it. The follwing sections will explain various strategies that can be used to align the output symbols to input seqeunce to form a label sequence. 
+CTC algorithm takes the probabilty distribution across all vocabulary symbols at all time steps and decodes the label sequence from it. The following sections will explain various strategies that can be used to align the output symbols to input seqeunce to form a label sequence. 
 
 ### 2.1. Alignment Strategies for Model Training
 
