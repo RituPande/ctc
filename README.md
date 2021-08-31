@@ -90,7 +90,7 @@ P(S = S<sub>r</sub>, S | X ) is the total probability of all valid paths in the 
  
  P(S =S<sub>r</sub> , S | X )  for all S<sub>r</sub> &in; S is calculated using ***Forward Backward algorithm***
   
-### 2.2. Handling Repeatitions
+### 2.2. Handling Repetitions
 
 ### 2.3. Variants of CTC
 
