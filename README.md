@@ -4,7 +4,7 @@ In this paper, we attempt to understand the principles and mathematics of *Conne
 
 ## 1. Sequence to Sequence Models  
 
-Sequence to Sequence models are deep learning models that take a sequence of symbols as input and also output a seqeunce of symbols.  Sequence to Seqeunce models are implemented as Reccurrent Neural Networks or RNNs. RNNs take X<sub>1</sub>, X<sub>2</sub>, ..., X<sub>N</sub> inputs at each time step respectively and output a label sequence Y<sub>1</sub>, Y<sub>2</sub>, ..., Y<sub>M</sub>. Between  input and the output layer, there is a *hiddent layer*, that passes the information about inputs from the previous timesteps to the next timestep. There are other variants of RNN, such as those which provide the output Y<sub>k</sub> as an additional input to step k+1. But for simplicity, we shall only focus on the most basic RNN implementation to understand the mechanics of CTC.  
+Sequence to Sequence models are deep learning models that take a sequence of symbols as input and also output a seqeunce of symbols.  Sequence to Seqeunce models are implemented as Reccurrent Neural Networks or RNNs. RNNs take X<sub>1</sub>, X<sub>2</sub>, ..., X<sub>N</sub> inputs at each time step respectively and output a label sequence Y<sub>1</sub>, Y<sub>2</sub>, ..., Y<sub>M</sub>. Between  input and the output layer, there is a *hidden layer*, that passes the information about inputs from the previous timesteps to the next timestep. There are other variants of RNN, such as those which provide the output Y<sub>k</sub> as an additional input to step k+1. But for simplicity, we shall only focus on the most basic RNN implementation to understand the mechanics of CTC.  
   
   <p align="center">
   <img src="./images/RNN.png"> <br> 
@@ -12,7 +12,7 @@ Sequence to Sequence models are deep learning models that take a sequence of sym
   </p>
   
   
-## 2. Understanding Connectionist Temporal Classficiation    
+## 2. Understanding Connectionist Temporal Classfication    
 *Connectionist Temporal Classification* or CTC is a neural network output decoding and scoring algorithm that is used in sequence to sequence deep learning models.  It is sepcifically used in models where:  
 - The length of input sequence is greater than the length of output sequence
 - The output sequence order corresponds to the input sequence order.
