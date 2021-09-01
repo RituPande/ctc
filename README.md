@@ -16,9 +16,11 @@ Sequence to Sequence models are deep learning models that take a sequence of sym
 Before delving into the details of CTC let us define some terms used in the following sections:  
 
 **Input Sequence**: Input to the RNN in sequence to sequence models  
+**Input Symbols**: Symbols in Input sequence  
 **Output Sequence**: Output of the RNN after decoding or the ground truth during training.  
+**Output Symbols**: Symbols in Output sequence  
 **Label Sequence**: Alignment of Output Sequence to the Input Sequence. length(label sequence) = length(Input sequence)     
-
+          
 *Connectionist Temporal Classification* or CTC is a neural network output decoding and scoring algorithm that is used in sequence to sequence deep learning models. It is specifically used in models where:  
 - The length of input sequence is greater than the length of output sequence
 - The output sequence order corresponds to the input sequence order.
