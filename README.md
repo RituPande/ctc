@@ -100,6 +100,12 @@ P(S = S<sub>r</sub>, S | X ) is the total probability of all valid paths in the 
   
 ### 2.2. Handling Repetitions
 
+  <p align="center">
+  <img src="./images/repetitions.png"> <br> 
+  <b> Figure 4. Handling Repetitions </b>  
+  </p>
+  
+
 ### 2.3. Variants of CTC
 
 There are many variations of CTC described above that can be used in sequence to sequence model:  
