@@ -109,7 +109,7 @@ Each output symbol in the Figure-3 is preceded and followed by the new symbol **
   <b> Figure 4. Handling Repetitions </b>  
   </p>
   
- Symbols separated by **'_'** are not collapsed. Hence repetitions are learned by the network such that they are separated by **'_'**. The output sequence ABA in the graph above can result in label sequence _A_BA, ABA_ _, AB_A etc.
+ Symbols separated by '\_' are not collapsed. Hence repetitions are learned by the network such that they are separated by '\_'. The output sequence ABA in the graph above can result in label sequence _A_BA, ABA_ _, AB_A etc.
  
  For output sequences that contain repetitions, e.g.  AABC,  a different graph would generate a possible label sequence as A_A_BC. Since repeated symbols around **'_'** are not callpsed, it is decoded  as  AABC.   
  
