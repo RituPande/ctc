@@ -85,12 +85,12 @@ For example, for a 5-step input sequence, if the output sequence is only of leng
 
 Choosing expectated alignment at each iteration instead of the most probable alignment is more statistically robust and prevents the solution to converge to a bad local optima.
 
-Loss = E[ - &sum; <sub>k</sub> log( Y<sub>k</sub>(S = S<sub>r</sub> ) ]
+Loss = E[ &minus; &sum; <sub>k</sub> log( Y<sub>k</sub>(S = S<sub>r</sub> ) ]
 
 Due to linearilty of expectation:  
-&emsp;&emsp;&emsp;&emsp; = - &sum; <sub>k</sub> E [ log( Y<sub>k</sub>(S=S<sub>r</sub> ) ]
+&emsp;&emsp;&emsp;&emsp; = &minus; &sum; <sub>k</sub> E [ log( Y<sub>k</sub>(S=S<sub>r</sub> ) ]
 
-&emsp;&emsp;&emsp;&emsp; = - &sum; <sub>k</sub> &sum; <sub> S<sub>r</sub> </sub> P(S=S<sub>r</sub> |S, X )log( Y<sub>k</sub>(S =S<sub>r</sub> ) where S is a output sequence and X is input sequence  
+&emsp;&emsp;&emsp;&emsp; = &minus; &sum; <sub>k</sub> &sum; <sub> S<sub>r</sub> </sub> P(S=S<sub>r</sub> |S, X )log( Y<sub>k</sub>(S =S<sub>r</sub> ) where S is a output sequence and X is input sequence  
 
 P(S <sub>k </sub>=S<sub>r</sub> |S, X ) &prop; P(S=S<sub>r</sub> , S |X )  
   
