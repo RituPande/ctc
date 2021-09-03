@@ -100,14 +100,18 @@ P(S = S<sub>r</sub>, S | X ) is the total probability of all valid paths in the 
   
 ### 2.2. Handling Repetitions
 
-As explained earlier, label sequences that differ only in their alignment are considered equivalent e.g. Label sequences AABAA and ABBAA are both equivalent and decoded as ABA by CTC, collapsing the symbol repetitions into a single symbol. This however, creates a problem of how to handle cases wherin the output symbols contain repetitions. The alignment strategies we have seen till now 
+As explained earlier, label sequences that differ only in their alignment are considered equivalent e.g. Label sequences AABAA and ABBAA are both equivalent and decoded as ABA by CTC, collapsing the symbol repetitions into a single symbol. This however, creates a problem in handling cases wherin the output symbols contain repetitions. The repetitions will be collapsed to a single symbol. This problem is addressed by introducing a new symbol **'_'** to the CTC hierarchy.  
+
+Each output symbol in the Figure-3 is preceded and followed by the new symbol **'_'**. The constraint graph is modified as follows 
 
   <p align="center">
   <img src="./images/repetitions.png"> <br> 
   <b> Figure 4. Handling Repetitions </b>  
   </p>
   
-
+ Symbols separated by **'_'** are not collapsed. Hence repetitions are learned by the network such that they are separated by **'_'**. e.g. AA_AAA_BC is decoded as AABC.   
+ 
+  
 ### 2.3. Variants of CTC
 
 There are many variations of CTC described above that can be used in sequence to sequence model:  
