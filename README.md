@@ -100,6 +100,8 @@ P(S = S<sub>r</sub>, S | X ) is the total probability of all valid paths in the 
   
 ### 2.2. Handling Repetitions
 
+As explained earlier, label sequences that differ only in their alignment are considered equivalent e.g. Label sequences AABAA and ABBAA are both equivalent and decoded as ABA by CTC, collapsing the symbol repetitions into a single symbol. This however, creates a problem of how to handle cases wherin the output symbols contain repetitions. The alignment strategies we have seen till now 
+
   <p align="center">
   <img src="./images/repetitions.png"> <br> 
   <b> Figure 4. Handling Repetitions </b>  
